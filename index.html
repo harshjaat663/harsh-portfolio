@@ -6,10 +6,585 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="Nav-Foot.css"/>
-  <link rel="stylesheet" href="Home.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
     <!--Remixicon Cdn -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+<style>  /*NavBar*/
+  
+  
+  .navbar {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    background: rgba(4, 4, 4, 0.188);
+    box-shadow: 5px -5px 5px 0px rgba(0, 0, 0, 0.534);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 999;
+  }
+  .navbar ul{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .navbar ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar ul .list_a{
+  display: flex;
+  width:5%;
+  height: 2vmax;
+  justify-content:center;
+  align-items:center;
+  }
+  .navbar ul .list_b{
+    display: flex;
+    width:33%;
+    justify-content: left;
+    align-items: end;
+  }
+  .navbar ul .list_c{
+    display: flex;
+    width:60%;
+    justify-content: right;
+  }
+  @media(max-width:1000px){
+    .navbar{
+      height: 5vmax;
+    }
+
+    .navbar ul .list_a{
+      width:5%;
+      height: 4vmax;
+      }
+      .navbar ul .list_b{
+        width:35%;
+      }
+      .navbar ul .list_c{
+        width:55%;
+      }
+
+  }
+  @media(max-width:800px){
+
+    .navbar ul .list_a{
+      width:5%;
+      height: 4vmax;
+      }
+      .navbar ul .list_b{
+        width:40%;
+      }
+      .navbar ul .list_c{
+        width:55%;
+      }
+
+  }
+  @media(max-width:600px)
+  {
+    .navbar ul .list_a{
+      width:8%;
+      height: 4vmax;
+      }
+      .navbar ul .list_b{
+        width:50%;
+      }
+      .navbar ul .list_c{
+        width:40%;
+      }
+  }
+  .navdiv {
+    width: 22vmax;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #checkbox{
+    display: none;
+  }
+  .Menu{
+    display: none;
+  }
+  
+  .navelements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    }
+  .navhover{
+    color: rgb(209, 209, 209);
+    border-radius:0.3vmax;
+    font-size: 0.9vmax;
+    padding: 0.1vmax 0.3vmax 0.1vmax 0.3vmax;
+    }
+  .navhover:hover{
+    border-radius:0.3vmax;
+    padding: 0.1vmax 0.3vmax 0.1vmax 0.3vmax;
+    box-shadow:0.3vmax -0.3vmax 0.3vmax rgba(0, 0, 0, 0.664);
+  }
+ 
+  @media (max-width:1000px)
+  {
+  
+    #checkbox:checked~.navdiv{
+        visibility: visible;
+        transition-duration: 5s;
+      }
+      .Menu{
+        font-size: 3vmax;
+        margin-right: 10px;
+       display: flex;
+      }
+  
+      #checkbox{
+        display: visible;
+      }
+      .navdiv {
+        font-size: 15px;
+        height: 200px;
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-items: center;
+        position: absolute;
+        visibility: hidden;
+        top: 80px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius:30px 30px 30px 30px;
+        box-shadow: inset 5px -5px 5px 0px rgba(0, 0, 0, 0.534);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        z-index:4;
+      }
+  .navhover{
+    font-size: 1.5vmax;
+  }
+      
+  }
+ 
+    
+    /*  Logo  */
+  
+
+.boydiv{
+  width: 4vmax;
+  height:2vmax;
+  display: flex;
+  justify-content:right;
+}
+
+    .boypng{
+      height: 2vmax;
+    }
+  
+  .logo {
+    font-size: 1.2vmax;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+  
+  .logo a:hover {
+    border-radius:0.3vmax;
+    padding: 0.1vmax 0.3vmax 0.1vmax 0.3vmax;
+    box-shadow:0.3vmax -0.3vmax 0.3vmax rgba(0, 0, 0, 0.664);
+  }
+  
+  .logodiv {
+    display: flex;
+    width: 20vmax;
+    justify-content:left;
+    align-items:end;
+  } 
+  .logospanclr{
+    font-family: Arial;
+    color: aqua;
+  }
+  .logo .HarshSpan {
+    color: rgb(209, 209, 209);
+    letter-spacing: 0.1vmax;
+  }
+  @media(max-width:1000px)
+  {
+    .boypng{
+    height: 3vmax;
+    }
+    .logo {
+        font-size: 2.4vmax;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .logodiv {
+        display: flex;
+        height: 20px;
+        width: 60vmax;
+        justify-content:left;
+    } 
+  }
+  
+
+  /*     Footer    */
+
+
+.footerdiv {
+  width:100%;
+  height:30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+
+  background: rgba(4, 4, 4, 0.188);
+box-shadow: 5px -5px 5px 0px rgba(0, 0, 0, 0.534);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+}
+.footerdiv pre{
+  font-size: 13px;
+}
+
+  @media (max-width:800px){
+  .footerdiv pre{
+      font-size: 10px;
+  }
+}
+  
+/*    Column   */
+.columndiv {
+    background-size: cover;
+    height: 55vmax;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+}
+
+
+
+/*  profile  */
+
+.profilediv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vmax;
+    width: 30vmax;
+    background:rgba(255, 255, 255, 0.137);
+    box-shadow:inset 0.4vmax -0.4vmax 0.4vmax rgba(0, 0, 0, 0.664);
+    animation-name: proanim;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 2;
+    overflow: hidden;
+    background-image: url("/Portfolio Web/Images/Harsh.png");
+    background-size: cover;
+}
+
+@keyframes proanim {
+    0%
+    {
+        border-radius: 50% 50% 50% 50% /50% 50% 50% 50%  ;
+    
+    }
+    25%{
+        border-radius:48% 52% 61% 39% / 30% 36% 64% 70% ;
+     
+    }
+    50%{
+        border-radius:61% 39% 54% 46% / 46% 56% 44% 54%  ; 
+         
+    }
+    75%{
+        border-radius:39% 61% 41% 59% / 59% 48% 52% 41%  ;
+         
+    }
+    100%{
+        border-radius: 50% 50% 50% 50% /50% 50% 50% 50%;
+         
+    }
+}
+
+
+ /*  animation and icon */
+ .animborder{
+    height: 20vmax;
+    width:30vmax;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction:column;
+    box-shadow:inset 0.3vmax -0.3vmax 0.6vmax rgba(0, 0, 0, 0.664);
+    border-radius:2vmax;
+    margin: 2.5vmax 2.5vmax 0 0;
+    
+ }
+ 
+
+ .animicondiv{
+    height: 21vmax;
+    width:31vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius:2vmax;
+    position: relative;
+    box-shadow:0.3vmax -0.3vmax 0.6vmax rgba(0, 0, 0, 0.664);
+    animation-name:animconslide;
+    animation-duration: 1.5s;
+    animation-timing-function:ease-in;
+    animation-iteration-count: 1;
+    background-image: linear-gradient( to top right , rgb(124,89,104), rgb(94,88,117) );
+    top:-1.5vmax;
+    right: -1.5vmax;
+    
+    }
+@keyframes animconslide{
+    0%{
+        top:0vmax;
+    right: 0vmax;
+    height: 20.1vmax;
+    width:30.1vmax;
+    box-shadow:0.0vmax -0.0vmax 0.0vmax rgba(0, 0, 0, 0.664);
+    }
+    0%{
+        top:0vmax;
+    right: 0vmax;
+    height: 20.1vmax;
+    width:30.1vmax;
+    box-shadow:0.0vmax -0.0vmax 0.0vmax rgba(0, 0, 0, 0.664);
+    }
+   100%{
+        
+    top:-1.5vmax;
+    right: -1.5vmax;
+        box-shadow:0.3vmax -0.3vmax 0.6vmax rgba(0, 0, 0, 0.664);
+        
+    }
+    
+    
+}
+    
+
+/*  Text Animation   */
+.animdiv{
+    height:9vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.animhead p {
+    font-size: 2.7vmax;
+    width: 10vmax;
+    text-shadow:inset 5px -5px 5px rgba(0, 0, 0, 0.534);
+    color: rgba(255, 255, 255, 0.667);
+    font-family: none;
+}
+
+
+.animtextdiv {
+    height: 5vmax;
+    width: 22.5vmax;
+    background:rgb(145,131,147);
+    justify-content: center;
+    align-items: start;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow:inset 0.4vmax -0.4vmax 0.4vmax rgba(0, 0, 0, 0.664);
+}
+
+
+.animlist{
+    font-size: 2.5vmax;
+    letter-spacing: 1px;
+    height: 3.5vmax;
+    width: 20vmax;
+    margin: 0.1vmax 0 0 1.5vmax ;
+    overflow: hidden;
+}
+.animlist li{
+    position: relative;
+    top:0%;
+    line-height: 4.7vmax;
+    animation: slide 6s steps(3) infinite;
+}
+@keyframes slide {
+
+    100%{
+        top:-13.9vmax;
+        }
+}
+
+.animlist li span{
+    position: relative;
+}
+.animlist li span::after { 
+    content: "";
+    position: absolute;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    margin-top: 0.8vmax;
+    background:rgb(145,131,147);
+    border-left: 0.2vmax solid rgba(255, 255, 255, 0.746);
+    animation: typing 2s steps(10) infinite;
+}
+@keyframes typing {
+
+    100%{
+        left: 100%;
+        margin: 0.8vmax 0 0 2.5vmax;
+}
+}
+
+
+/* iconbox   */
+
+.iconbox{
+    height: 5vmax;
+    width:22.5vmax ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconbox ul{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.iconbox ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5vmax;
+    height: 6vmax;
+    font-size: 5vmax;
+    padding: 0.5vmax;
+}
+
+
+
+/*   Introduction   */
+
+
+
+.introheadsection{
+    height: 5vmax;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  }
+  
+  
+  .introheading{
+    display: flex;
+    font-size: 1.5vmax;
+    height: 4vmax;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(4, 4, 4, 0.188);
+    box-shadow:0vmax -0.3vmax 0.6vmax rgba(0, 0, 0, 0.664);
+  }
+
+.introdiv {
+    width: 100%;
+    height: 50vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.introbody {
+    height: 40vmax;
+    width: 60vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.introtext {
+    display: flex;
+    flex-wrap: wrap;
+    font-size:1.1vmax;
+    word-spacing: 0.5vmax;
+    width: 80%;
+    height: 70%;
+    justify-content: center;
+    background:rgba(131, 118, 133, 0.651);
+    align-items: center;
+    text-align: center;
+    line-height: 2vmax;
+    box-shadow:0.4vmax -0.4vmax 0.3vmax rgba(0, 0, 0, 0.664);
+    border-radius: 0 10vmax 0 10vmax;
+}
+.introtext p{
+    color: rgb(255, 255, 255);
+}
+
+.spanclr{
+    color: rgb(58, 255, 202);
+}
+@media (max-width:800px){
+    .columndiv{
+        height:95vmax;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        }
+        .profilediv{
+            margin-top: 10vmax;
+        }
+        .introdiv{
+            height: 9vmax;
+            
+        }
+        .introbody{
+       width: 85%;
+       
+        }
+        
+        .introtext{
+            height: 40vmax;
+            width:50vmax;
+            padding:2vmax;
+            font-size: 1.5vmax;
+            text-align: center;
+            line-height: 3vmax;
+        }
+    }
+  </style>
    
 </head>
 
