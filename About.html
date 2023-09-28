@@ -4,9 +4,703 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/Portfolio Web/CSS/Nav-Foot.css">
-  <link rel="stylesheet" href="/Portfolio Web/CSS/About.css">
+  <title> Harsh Malik Portfolio</title>
+  <style>
+    *{
+    color: rgb(255, 255, 255);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    border:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient( to top right , rgb(181, 107, 113) , rgb(52, 93, 128));
+  }
+  
+  /*NavBar*/
+  
+  
+  .navbar {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    background: rgba(4, 4, 4, 0.188);
+    box-shadow: 5px -5px 5px 0px rgba(0, 0, 0, 0.534);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 999;
+  }
+  .navbar ul{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .navbar ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar ul .list_a{
+  display: flex;
+  width:5%;
+  height: 2vmax;
+  justify-content:center;
+  align-items:center;
+  }
+  .navbar ul .list_b{
+    display: flex;
+    width:33%;
+    justify-content: left;
+    align-items: end;
+  }
+  .navbar ul .list_c{
+    display: flex;
+    width:60%;
+    justify-content: right;
+  }
+  @media(max-width:1000px){
+    .navbar{
+      height: 5vmax;
+    }
+  
+    .navbar ul .list_a{
+      width:5%;
+      height: 4vmax;
+      }
+      .navbar ul .list_b{
+        width:35%;
+      }
+      .navbar ul .list_c{
+        width:55%;
+      }
+  
+  }
+  @media(max-width:800px){
+  
+    .navbar ul .list_a{
+      width:5%;
+      height: 4vmax;
+      }
+      .navbar ul .list_b{
+        width:40%;
+      }
+      .navbar ul .list_c{
+        width:55%;
+      }
+  
+  }
+  @media(max-width:600px)
+  {
+    .navbar ul .list_a{
+      width:8%;
+      height: 4vmax;
+      }
+      .navbar ul .list_b{
+        width:50%;
+      }
+      .navbar ul .list_c{
+        width:40%;
+      }
+  }
+  .navdiv {
+    width: 22vmax;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #checkbox{
+    display: none;
+  }
+  .Menu{
+    display: none;
+  }
+  
+  .navelements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    }
+  .navhover{
+    color: rgb(209, 209, 209);
+    border-radius:0.3vmax;
+    font-size: 0.9vmax;
+    padding: 0.1vmax 0.3vmax 0.1vmax 0.3vmax;
+    }
+  .navhover:hover{
+    border-radius:0.3vmax;
+    padding: 0.1vmax 0.3vmax 0.1vmax 0.3vmax;
+    box-shadow:0.3vmax -0.3vmax 0.3vmax rgba(0, 0, 0, 0.664);
+  }
+  
+  @media (max-width:1000px)
+  {
+  
+    #checkbox:checked~.navdiv{
+        visibility: visible;
+        transition-duration: 5s;
+      }
+      .Menu{
+        font-size: 3vmax;
+        margin-right: 10px;
+       display: flex;
+      }
+  
+      #checkbox{
+        display: visible;
+      }
+      .navdiv {
+        font-size: 15px;
+        height: 200px;
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-items: center;
+        position: absolute;
+        visibility: hidden;
+        top: 80px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius:30px 30px 30px 30px;
+        box-shadow: inset 5px -5px 5px 0px rgba(0, 0, 0, 0.534);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        z-index:4;
+      }
+  .navhover{
+    font-size: 1.5vmax;
+  }
+      
+  }
+  
+    
+    /*  Logo  */
+  
+  
+  .boydiv{
+  width: 4vmax;
+  height:2vmax;
+  display: flex;
+  justify-content:right;
+  }
+  
+    .boypng{
+      height: 2vmax;
+    }
+  
+  .logo {
+    font-size: 1.2vmax;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+  
+  .logo a:hover {
+    border-radius:0.3vmax;
+    padding: 0.1vmax 0.3vmax 0.1vmax 0.3vmax;
+    box-shadow:0.3vmax -0.3vmax 0.3vmax rgba(0, 0, 0, 0.664);
+  }
+  
+  .logodiv {
+    display: flex;
+    width: 20vmax;
+    justify-content:left;
+    align-items:end;
+  } 
+  .logospanclr{
+    font-family: Arial;
+    color: aqua;
+  }
+  .logo .HarshSpan {
+    color: rgb(209, 209, 209);
+    letter-spacing: 0.1vmax;
+  }
+  @media(max-width:1000px)
+  {
+    .boypng{
+    height: 3vmax;
+    }
+    .logo {
+        font-size: 2.4vmax;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .logodiv {
+        display: flex;
+        height: 20px;
+        width: 60vmax;
+        justify-content:left;
+    } 
+  }
+  
+  
+  /*     Footer    */
+  
+  
+  .footerdiv {
+  width:100%;
+  height:30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+  
+  background: rgba(4, 4, 4, 0.188);
+  box-shadow: 5px -5px 5px 0px rgba(0, 0, 0, 0.534);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  }
+  .footerdiv pre{
+  font-size: 13px;
+  }
+  
+  @media (max-width:800px){
+  .footerdiv pre{
+      font-size: 10px;
+  }
+  }
+  /*  Skills Body  */
+  
+  .skillsbodysection {
+    height: 55vmax;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1vmax;
+    flex-wrap: wrap;
+  }
+  .skillcolordiv {
+    height: 18vmax;
+    width: 13vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(255, 255, 255, 0.053);
+    align-items: center;
+    border-radius: 3vmax;
+    box-shadow:inset 0.3vmax -0.3vmax 0.6vmax rgba(0, 0, 0, 0.664);
+    overflow:hidden;
+  }
+  @media(max-width:600px)
+  {
+    .skillsbodysection{
+      height: 90vmax;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding-top: 5vmax;
+    }
+    .skillcolordiv{
+      width:45vmax;
+      height: 8vmax;
+      }
+  }
+  
+  
+  .educationcolor{
+    font-weight: bolder;
+    width: 1.5vmax;
+    height: 1.5vmax;
+    border-radius: 50%;
+    box-shadow:inset 0.3vmax -0.3vmax 0.6vmax rgba(0, 0, 0, 0.664);
+  }
+  @media(max-width:600px){
+    .educationcolor{
+     height: 2vmax;
+     width:2vmax;
+    }
+  }
+  .green{
+    background-color:rgba(63, 227, 85, 0.775) ;
+  }
+  .orange{
+    background-color:rgba(205, 227, 63, 0.775) ;
+  }
+  .red{
+    background-color:rgba(227, 118, 63, 0.775) ;
+  }
+  
+  .colorlist {
+    height: 12vmax;
+    width: 10vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  
+  /* skills color class*/
+  .colorclass{
+    background: rgb(196, 228, 253);
+    color: rgb(58, 2, 110);
+    height: 2.7vmax;
+    width: 8vmax;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+    align-items: center;
+    padding:0 1vmax 0 1vmax;
+    border-radius: 20vmax;
+    box-shadow:0.3vmax -0.3vmax 0.6vmax rgba(0, 0, 0, 0.664);
+    overflow: hidden;
+  }
+  
+  
+  
+  .skillselements {
+    height: 35vmax;
+    width: 35vmax;
+    background:rgba(255, 255, 255, 0.053);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 3vmax;
+    text-align: center;
+    box-shadow:inset 0.3vmax -0.3vmax 0.6vmax rgba(0, 0, 0, 0.664);
+    overflow: hidden;
+  }
+  
+  .skillsdiv{
+    background: rgb(196, 228, 253);
+    height: 3.5vmax;
+    width: 40%;
+    margin-top: 2.5vmax;
+    display: flex;
+    font-size: 1.5vmax;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20vmax;
+    box-shadow:0.3vmax -0.3vmax 0.6vmax rgba(0, 0, 0, 0.664);
+   
+  }
+  .skillsdiv p{
+    color: rgb(58, 2, 110);
+    font-weight: bolder;
+  }
+  
+  .skillslist {
+    width: 27vmax;
+    height: 30vmax;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  @media(max-width:600px)
+  {
+    .colorclass{
+      height: 3.5vmax;
+      width: 11vmax;
+      font-size: 1.3vmax;
+    }
+  .skillselements{
+    height: 40vmax;
+    width: 40vmax;
+  }
+  .skillslist{
+    height: 35vmax;
+    width: 35vmax;
+  }
+  }
+  
+  
+  .list1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 10vmax;
+    height: 26vmax;
+  }
+  .list1{
+    animation-name: slidelist1;
+    animation-duration: 4s;
+  }
+  
+  @keyframes slidelist1{
+    0%{
+      transform: translateX(-15vmax);
+    }
+    100%{
+      transform: translatex(0vmax);
+    }
+  }
+  
+  
+  .list2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 10vmax;
+    height: 26vmax;
+    align-items: center;
+  }
+  .list2{
+    animation-name: slidelist2;
+    animation-duration: 4s;
+  }
+  @keyframes slidelist2 {
+    0%{
+      transform: translateX(15vmax);
+    }
+    100%{
+      transform: translatex(0vmax);
+    }
+  }
+  #Advance{
+    animation-name:Advance;
+    animation-duration: 4s;
+  }
+  @keyframes Advance{
+    0%{
+      transform: translatey(-10vmax);
+    }
+    100%{
+      transform: translatey(0px);
+    }
+  }
+  #Intermediate{
+    animation-name:Intermediate;
+    animation-duration: 4s;
+  }
+  @keyframes Intermediate{
+    0%{
+      transform: translatex(-15vmax);
+    }
+    100%{
+      transform: translatex(0px);
+    }
+  }
+  #Basic{
+    animation-name:Basic;
+    animation-duration: 4s;
+  }
+  @keyframes Basic
+  {
+    0%{
+      transform: translatey(10vmax);
+    }
+    100%{
+      transform: translatey(0px);
+    }
+  }
+  @media(max-width:600px){
+    #Advance{
+      animation-name:Advance;
+      animation-duration: 4s;
+    }
+    @keyframes Advance{
+      0%{
+        transform: translatex(-20vmax);
+      }
+      100%{
+        transform: translatex(0px);
+      }
+    }
+    #Intermediate{
+      animation-name:Intermediate;
+      animation-duration: 4s;
+    }
+    @keyframes Intermediate{
+      0%{
+        transform: translatey(10vmax);
+      }
+      100%{
+        transform: translatey(0px);
+      }
+    }
+    #Basic{
+      animation-name:Basic;
+      animation-duration: 4s;
+    }
+    @keyframes Basic
+    {
+      0%{
+        transform: translatex(20vmax);
+      }
+      100%{
+        transform: translatex(0px);
+      }
+    }
+  }
+  
+  .skillsdiv{
+    animation-name: skillsdiv;
+    animation-duration: 3s;
+  }
+  @keyframes skillsdiv{
+    0%{
+      transform: translatey(35vmax);
+    }
+    100%{
+      transform: translatey(0vmax);
+  }
+  }
+  
+  @media(max-width:600px)
+  {
+  .colorlist{
+    flex-direction: row;
+    height: 7vmax;
+    width:93%;
+    padding:0;
+    flex-direction: row;
+    align-items: center;
+  }
+  .list1{
+    width: 15vmax;
+  }
+  .list2{
+    width: 15vmax;
+  }
+  @keyframes slidelist2 {
+    0%{
+      transform: translateX(20vmax);
+    }
+    100%{
+      transform: translatex(0vmax);
+    }
+  }
+  @keyframes slidelist1 {
+    0%{
+      transform: translateX(-20vmax);
+    }
+    100%{
+      transform: translatex(0vmax);
+    }
+  }
+  .skillsdiv{
+    height: 5vmax;
+    font-size: 2vmax;
+  }
+  @keyframes skillsdiv{
+    0%{
+      transform: translatey(40vmax);
+    }
+    100%{
+      transform: translatey(0vmax);
+  }
+  }
+  }
+  
+  
+  /*Education*/
+  
+  .eduheadsection{
+    height: 5vmax;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  }
+  
+  
+  .Educationheading{
+    display: flex;
+    font-size: 1.5vmax;
+    height: 4vmax;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(4, 4, 4, 0.188);
+    box-shadow:0vmax -0.3vmax 0.6vmax rgba(0, 0, 0, 0.664);
+  }
+  
+  .Educationsection{
+  width:100%;
+  height:50vmax;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+  }
+  .educlassdiv{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      background-image: linear-gradient( to top right , rgba(0, 0, 0, 0.14), rgba(146, 145, 146, 0.106) );
+      
+      height:30vmax;
+      width:20vmax;
+      box-shadow:inset 0.3vmax -0.3vmax 0.6vmax rgba(0, 0, 0, 0.664);
+      overflow: hidden;
+      border-radius: 1vmax 1vmax 1vmax 1vmax;
+    }
+  
+  @media(max-width:600px)
+  {
+    
+  }
+  /*college*/
+  
+  
+  .clgimgsrc{
+    height:12vmax;
+    width: 12vmax;
+    border-radius:200px;
+    object-fit: cover;
+    box-shadow:0.3vmax -0.3vmax 0.6vmax rgba(0, 0, 0, 0.664);
+  }
+  .clginfo{
+    font-size: 0.9vmax;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    line-height: 3vmax;
+  }
+  .Tcilist li{
+    list-style: disc;
+    color: rgb(255, 255, 255);
+  font-weight: bold;
+  }
+  
+  
+  @media(max-width:600px){
+    .Educationsection{
+      height:100vmax;
+      flex-direction: column;
+    }
+    .educlassdiv{
+      flex-direction: row;
+      width: 40vmax;
+      height: 20vmax;
+      background: rgb(196, 228, 253);
+    }
+  
+    .Tcilist li{
+  font-size: 1.3vmax;
+  color: rgb(58, 2, 110);
+  font-weight: bold;
+    }
+  
+    }
+  </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
 </head>
 
@@ -146,7 +840,7 @@
               <a href="http://jjicikri.com/index.php"
                 ><img
                   class="clgimgsrc"
-                  src="/Portfolio Web/Images/10thclg.jpg"
+                  src="10thclg.jpg"
                   alt="J.J Inter College, Ikri(Meerut)"
               /></a>
             </div>
@@ -169,7 +863,7 @@
                 <a href="http://sgsicdabthwa.org/View.aspx?index=2"
                   ><img
                     class="clgimgsrc"
-                    src="/Portfolio Web/Images/SGS.jpeg"
+                    src="SGS.jpeg"
                     alt="J.J Inter College, Ikri(Meerut)"
                 /></a>
                </div>
@@ -191,7 +885,7 @@
               <a href="https://www.ddumc.in/"
                 ><img
                   class="clgimgsrc"
-                  src="/Portfolio Web/Images/DDUMC.jpg"
+                  src="DDUMC.jpg"
                   alt="J.J Inter College, Ikri(Meerut)"
               /></a>
             </div>
